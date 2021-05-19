@@ -20,8 +20,8 @@ Depending on your preferred package manager, follow the instructions below to de
 
 This template contains a single lambda function triggered by an HTTP request made on the provisioned API Gateway REST API `/webhook` route with `POST` method. The request body must be provided as `application/json`. The body structure is tested by API Gateway against `src/functions/webhook/schema.ts` JSON-Schema definition: it must contain the `signature` and `event-data` properties.
 
-- requesting any other path than `/webhook` with any other method than `POST` will result in API Gateway returning a `403` HTTP error code
-- sending a `POST` request to `/hello` with a payload **not** containing a object properties named `name` and `` will result in API Gateway returning a `406` HTTP error code
+- requesting any other path than `/webhook` with any other method than `POST` will result in API Gateway returning a `404` HTTP error code
+- sending a `POST` request to `/webhook` with a payload **not** containing a object properties named `signature` and `event-data`` will result in API Gateway returning a `406` HTTP error code
 
 ### Locally
 
