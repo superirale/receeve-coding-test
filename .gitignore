@@ -1,5 +1,6 @@
 .env
 .serverless
+.webpack
 docs.md
 dump.rdb
 node_modules
